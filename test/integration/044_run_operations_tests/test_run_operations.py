@@ -69,3 +69,7 @@ class TestOperations(DBTIntegrationTest):
     @use_profile('postgres')
     def test__postgres_access_graph(self):
         self.run_operation('log_graph')
+
+    @use_profile('postgres')
+    def test__postgres_print(self):
+        self.run_operation('print_something')
