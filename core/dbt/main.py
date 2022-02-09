@@ -1084,6 +1084,17 @@ def parse_args(args, cls=DBTArgumentParser):
         '''
     )
 
+    p.add_argument(
+        '-q',
+        '--quiet',
+        action='store_true',
+        default=None,
+        help='''
+        Supress all non-error logging during dbt execution. Output from
+        {{ print() }} macro are still displayed.
+        '''
+    )
+
     subs = p.add_subparsers(title="Available sub-commands")
 
     base_subparser = _build_base_subparser()
