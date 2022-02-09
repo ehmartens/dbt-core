@@ -1090,8 +1090,8 @@ def parse_args(args, cls=DBTArgumentParser):
         action='store_true',
         default=None,
         help='''
-        Supress all non-error logging during dbt execution. Output from
-        {{ print() }} macro are still displayed.
+        Suppress all non-error logging to stdout. Does not affect
+        {{ print() }} macro calls.
         '''
     )
 
